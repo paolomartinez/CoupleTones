@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == PLACE_PICKER_REQUEST) {
             if(resultCode == RESULT_OK) {
                 Place place = PlacePicker.getPlace(data, this);
-                String address = String.format("Place: %s", place.getAddress());
+                String address = String.format("Place: %s", place.getLatLng());
                 get_place.setText(address);
             }
         }
